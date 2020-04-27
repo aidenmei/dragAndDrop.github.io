@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script> 
+
+</head>
+
+<body>
+
+<script>
+
+var config = {
+
+type: Phaser.AUTO,
+
+width: 1920,
+
+height: 1080,
+
+_parent: 'phaser',
+
+backgroundColor: '#efefef',
+
+scene: {
+
+preload: preload,
+
+create: create
+
+}
+
+};
+
+var game = new Phaser.Game(config);
+
+function preload ()
+
+{
+
+
+
+this.load.image('background', './assets/background.jpg');
+
+this.load.image('apple', 'assets/apple.png');
+
+this.load.image('fish', 'assets/fish.png');
+
+this.load.image('cake', 'assets/cake.png');
+
+this.load.image('candle', 'assets/candle.jpg');
+
+this.load.image('candy', 'assets/candy.jpg');
+
+this.load.image('car', 'assets/car.jpg');
+
+this.load.image('crab', 'assets/crab.jpg');
+
+this.load.image('eyes', 'assets/eyes.png');
+
+this.load.image('face', 'assets/face.jpg');
+
+this.load.image('flower', 'assets/flower.png');
+
+this.load.image('mouth', 'assets/mouth.jpg');
+
+this.load.image('nose', 'assets/nose.png');
+
+}
+
+function create ()
+
+{
+
+this.add.image(400, 300, 'background');
+
+var apple = this.add.sprite(100, 100, "apple");
+
+var fish = this.add.sprite(50, 50, "fish");
+
+var cake = this.add.sprite(50, 50, "cake");
+
+var candle = this.add.sprite(50, 50, "candle");
+
+var car = this.add.sprite(50, 50, "car");
+
+var crab = this.add.sprite(50, 50, "crab");
+
+var eyes = this.add.sprite(50, 50, "eyes");
+
+var face = this.add.sprite(50, 50, "face");
+
+var flower = this.add.sprite(50, 50, "flower");
+
+var nose = this.add.sprite(50, 50, "nose");
+
+var mouth = this.add.sprite(50, 50, "mouth");
+
+var candy = this.add.sprite(50, 50, "candy");
+
+
+apple.setInteractive();
+
+this.input.setDraggable(apple);
+
+candy.setInteractive();
+
+this.input.setDraggable(candy);
+
+mouth.setInteractive();
+
+this.input.setDraggable(mouth);
+
+fish.setInteractive();
+
+this.input.setDraggable(fish);
+
+cake.setInteractive();
+
+this.input.setDraggable(cake);
+
+candle.setInteractive();
+
+this.input.setDraggable(candle);
+
+car.setInteractive();
+
+this.input.setDraggable(car);
+
+crab.setInteractive();
+
+this.input.setDraggable(crab);
+
+eyes.setInteractive();
+
+this.input.setDraggable(eyes);
+
+flower.setInteractive();
+
+this.input.setDraggable(flower);
+
+nose.setInteractive();
+
+this.input.setDraggable(nose);
+
+face.setInteractive();
+
+this.input.setDraggable(face);
+
+this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
+
+gameObject.x = dragX;
+
+gameObject.y = dragY;
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
